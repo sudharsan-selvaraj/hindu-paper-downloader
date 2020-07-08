@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "version": "1.0.0",
+  "name": "Emoji picker for linkedin comments",
+  "short_name": "Emoji picker for LinkedIn",
+  "description": "Chrome extension to add emoji picker functionality for linkedin's comment section.",
+  "author": "Sudharsan Selvaraj <sudharsanselvaraj.c@gmail.com>",
+  "web_accessible_resources": [
+    "scripts/emoji.js",
+    "scripts/jquery.js"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "scripts/jquery.js",
+        "scripts/emoji.js",
+        "scripts/content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts": ["scripts/background.js"],
+    "persistent": true
+  },
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "homepage_url": "https://github.com/sudharsan-selvaraj/linkedin-comment-emoji-extension",
+  "offline_enabled": true,
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "tabs"
+  ]
+}
