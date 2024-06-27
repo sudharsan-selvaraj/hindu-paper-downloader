@@ -8,7 +8,7 @@ const {
 } = require("./reader");
 
 const main = async () => {
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
   const date = process.argv[2] || getTodayDate();
   const publicationId = process.argv[3] || "delhi";
