@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="popup.css">
+      <link rel="stylesheet" href="../lib/jquery-ui.css">
+      <title>Chrome Addon v3: popup</title>
+      <script type="text/javascript" src="../lib/jquery.js"></script>
+      <script type="text/javascript" src="../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../lib/jspdf.js"></script>
+   </head>
+   <body>
+      <div class="main-container">
+      <div class="date-container">
+         <div id="datepicker"></div>
+      </div>
+      <label for="cars">Select publication:</label>
+      <select name="publication" id="publication">
+         <option value='th_international'>international</option>
+         <option value='th_bangalore'>bangalore</option>
+         <option value='th_chennai'>chennai</option>
+         <option value='th_coimbatore'>coimbatore</option>
+         <option value='th_delhi'>delhi</option>
+         <option value='th_erode'>erode</option>
+         <option value='th_hyderabad'>hyderabad</option>
+         <option value='th_kochi'>kochi</option>
+         <option value='th_kolkata'>kolkata</option>
+         <option value='th_kozhikode'>kozhikode</option>
+         <option value='th_madurai'>madurai</option>
+         <option value='th_mangalore'>mangalore</option>
+         <option value='th_mumbai'>mumbai</option>
+         <option value='th_thiruvananthapuram'>thiruvananthapuram</option>
+         <option value='th_tiruchirapalli'>tiruchirapalli</option>
+         <option value='th_vijayawada'>vijayawada</option>
+         <option value='th_visakhapatnam'>visakhapatnam</option>
+      </select>
+      <button id="download">Download</button>
+      <div id="message"> </div>
+      <script type="text/javascript" src="popup.js"></script>
+   </body>
+</html>
